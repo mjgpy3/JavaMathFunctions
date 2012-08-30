@@ -35,6 +35,10 @@ public class MainContainer
 		for (Object o : MichaelMath.cloneShuffle(arrayOfSequentialNumbers))
 		    System.out.print(o + ", ");
 		System.out.println();
+		
+		System.out.println("4^(1/2) = " + MichaelMath.findRoot(4, 2));
+		System.out.println("27^(1/3) = " + MichaelMath.findRoot(27, 3));
+		System.out.println("2^(1/2) = " + MichaelMath.findRoot(2, 2));
 	}
 
 }

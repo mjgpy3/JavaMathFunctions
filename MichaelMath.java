@@ -108,4 +108,21 @@ public class MichaelMath
 		
 		return sorted;
 	}
+	
+	public static double findRoot(double base, double nthRoot)
+	{
+		return _findRoot(base, nthRoot, base, 0.0);
+	}
+	
+	private static double _findRoot(double base, double nthRoot, double top, double bottom)
+	{
+		double half = (top + bottom) / 2.0;
+		
+		if (Math.pow(half, nthRoot) == base || half == top || half == bottom)
+			return half;
+		else if (Math.pow(half, nthRoot) > base)
+			return _findRoot(base, nthRoot, half, bottom);
+		else
+			return _findRoot(base, nthRoot, top, half);
+	}
 }
